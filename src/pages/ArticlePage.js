@@ -12,8 +12,8 @@ const ArticlePage = ({match}) => {
     const [articleInfo, setArticleInfo] = useState({upvotes: 0, comment:[]});
 
     useEffect(() => {
-        setArticleInfo( {upvotes: 3});
-    });
+        setArticleInfo({ upvotes: Math.ceil(Math.random() * 10) });
+    }, [name]);
     if (!article) return <NotFoundPage />
 
     return(
